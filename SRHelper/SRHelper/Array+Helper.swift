@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+extension Array {
+    
+//    static func -(lhs: inout Array, rhs: Array) -> Array {
+//        return lhs.filter{ !rhs.contains( $0 ) }
+//        
+//    }
+}

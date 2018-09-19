@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1D5AFC214E45C300A19EB6 /* Double+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1D5AFB214E45C300A19EB6 /* Double+Helper.swift */; };
 		5E3EAD1621417041008F1A67 /* SRHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E3EAD1421417041008F1A67 /* SRHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E3EAD1D21417065008F1A67 /* Array+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3EAD1C21417065008F1A67 /* Array+Helper.swift */; };
+		5E824EC32148D91A007CCF45 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E824EC22148D91A007CCF45 /* String+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E1D5AFB214E45C300A19EB6 /* Double+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Helper.swift"; sourceTree = "<group>"; };
 		5E3EAD1121417041008F1A67 /* SRHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SRHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3EAD1421417041008F1A67 /* SRHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRHelper.h; sourceTree = "<group>"; };
 		5E3EAD1521417041008F1A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E3EAD1C21417065008F1A67 /* Array+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Helper.swift"; sourceTree = "<group>"; };
+		5E824EC22148D91A007CCF45 /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,9 @@
 			children = (
 				5E3EAD1421417041008F1A67 /* SRHelper.h */,
 				5E3EAD1521417041008F1A67 /* Info.plist */,
+				5E3EAD1C21417065008F1A67 /* Array+Helper.swift */,
+				5E824EC22148D91A007CCF45 /* String+Helper.swift */,
+				5E1D5AFB214E45C300A19EB6 /* Double+Helper.swift */,
 			);
 			path = SRHelper;
 			sourceTree = "<group>";
@@ -95,6 +104,7 @@
 				TargetAttributes = {
 					5E3EAD1021417041008F1A67 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -130,6 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E824EC32148D91A007CCF45 /* String+Helper.swift in Sources */,
+				5E1D5AFC214E45C300A19EB6 /* Double+Helper.swift in Sources */,
+				5E3EAD1D21417065008F1A67 /* Array+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +272,7 @@
 		5E3EAD1A21417041008F1A67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -275,6 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.s4m.ardhi.SRHelper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +298,7 @@
 		5E3EAD1B21417041008F1A67 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
