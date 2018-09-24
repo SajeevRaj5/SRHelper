@@ -8,6 +8,14 @@
 
 import Foundation
 
+// underline a string
+prefix operator --
+
+prefix func -- ( text: String) -> NSAttributedString {
+    return NSAttributedString(string: text, attributes:
+        [.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
+}
+
 extension String {
     
     var url: URL? {
@@ -46,5 +54,19 @@ extension String {
     static func combine(stringList: [String?], seperator: String) -> String {
         let result = stringList.compactMap{$0}
         return result.joined(separator: seperator)
+    }
+    
+    func remove(characterSet: CharacterSet) -> String {
+        return String(String.UnicodeScalarView(unicodeScalars.filter { !characterSet.contains($0) }))
+    }
+    
+    func color(with color: UIColor) -> NSAttributedString {
+        return NSAttributedString(string: self, attributes: [.foregroundColor: color])
+    }
+    
+    func toDate(format: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.date(from: self)
     }
 }

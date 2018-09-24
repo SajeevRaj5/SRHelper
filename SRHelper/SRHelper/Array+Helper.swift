@@ -8,10 +8,30 @@
 
 import Foundation
 
-extension Array {
+extension Array where Element: Equatable {
     
-//    static func -(lhs: inout Array, rhs: Array) -> Array {
-//        return lhs.filter{ !rhs.contains( $0 ) }
-//        
-//    }
+    static func -(lhs: inout Array, rhs: Array) -> Array {
+        return lhs.filter{ !rhs.contains( $0 ) }
+    }
+    
+    func removeDuplicates() -> [Element] {
+        var result: [Element] = []
+        for value in self {
+            if !result.contains(value) {
+                result.append(value)
+            }
+        }
+        return result
+    }
+    
+    mutating func unique() {
+        var result: [Element] = []
+        for value in self {
+            if !result.contains(value) {
+                result.append(value)
+            }
+        }
+        self = result
+    }
+
 }
