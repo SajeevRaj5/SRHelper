@@ -16,6 +16,12 @@ open class View: UIView {
         }
     }
     
+    @IBInspectable open var borderColor: UIColor? {
+        didSet {
+            configureView()
+        }
+    }
+    
     open override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -24,5 +30,8 @@ open class View: UIView {
     
     private func configureView() {
         layer.cornerRadius = cornerRadius
+        if let bordercolor = borderColor {
+            layer.borderColor = bordercolor.cgColor
+        }
     }
 }
