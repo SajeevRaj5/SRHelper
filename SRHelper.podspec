@@ -8,17 +8,14 @@
 
 Pod::Spec.new do |s|
 
-# 1
 s.platform = :ios
 s.ios.deployment_target = '10.0'
 s.name = 'SRHelper'
 s.summary = 'SRHelper provides necessary helper extensions for UI components.'
 s.requires_arc = true
 
-# 2
 s.version = '0.1.0'
 
-# 3
 s.license = { :type => 'MIT', :text => <<-License
 
 Copyright (c) [2018] [Sajeev Raj]
@@ -50,9 +47,8 @@ s.homepage = 'https://github.com/SajeevRaj5/SRHelper.git'
 s.source = { :git => 'https://github.com/SajeevRaj5/SRHelper.git', 
              :tag => s.version.to_s }
 
-s.source_files = 'SRHelper/Classes/**/*.{swift}'
+s.source_files = 'SRHelper/Classes/**/*'
 
-# 8
-s.swift_version = "4.1"
+s.swift_version = '4.1'
 
 end
