@@ -11,15 +11,15 @@ Pod::Spec.new do |s|
 # 1
 s.platform = :ios
 s.ios.deployment_target = '10.0'
-s.name = "SRHelper"
-s.summary = "SRHelper provides necessary helper extensions for UI components."
+s.name = 'SRHelper'
+s.summary = 'SRHelper provides necessary helper extensions for UI components.'
 s.requires_arc = true
 
 # 2
-s.version = "0.1.0"
+s.version = '0.1.0'
 
 # 3
-s.license = { :type => "MIT", :text => <<-License
+s.license = { :type => 'MIT', :text => <<-License
 
 Copyright (c) [2018] [Sajeev Raj]
 
@@ -43,17 +43,13 @@ SOFTWARE.
 License
 }
 
-# 4 - Replace with your name and e-mail address
-s.author = { "Sajeev Raj" => "sajeevraj.1989@gmail.com" }
+s.author = { 'Sajeev Raj' => 'sajeevraj.1989@gmail.com' }
 
-# 5 - Replace this URL with your own GitHub page's URL (from the address bar)
-s.homepage = "https://github.com/SajeevRaj5/SRHelper.git"
+s.homepage = 'https://github.com/SajeevRaj5/SRHelper.git'
 
-# 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/SajeevRaj5/SRHelper.git", :branch => "master", 
-             :tag => "#{s.version.to_s}" }
+s.source = { :git => 'https://github.com/SajeevRaj5/SRHelper.git', 
+             :tag => s.version.to_s }
 
-# 7
 s.source_files = "SRHelper/**/*.{swift}"
 
 # 8
