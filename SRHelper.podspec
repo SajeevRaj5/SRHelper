@@ -50,7 +50,7 @@ s.author = { "Sajeev Raj" => "sajeevraj.1989@gmail.com" }
 s.homepage = "https://github.com/SajeevRaj5/SRHelper.git"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/SajeevRaj5/SRHelper.git, :branch => "master", 
+s.source = { :git => "https://github.com/SajeevRaj5/SRHelper.git", :branch => "master", 
              :tag => "#{s.version.to_s}" }
 
 # 7
