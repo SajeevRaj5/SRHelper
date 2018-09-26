@@ -47,7 +47,7 @@ s.homepage = 'https://github.com/SajeevRaj5/SRHelper.git'
 s.source = { :git => 'https://github.com/SajeevRaj5/SRHelper.git', 
              :tag => s.version.to_s }
 
-s.source_files = 'SRHelper/Classes/**/*'
+s.source_files = 'SRHelper/SRHelper/Classes/**/*'
 
 s.swift_version = '4.1'
 
