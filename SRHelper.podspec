@@ -51,7 +51,7 @@ s.homepage = "https://github.com/SajeevRaj5/SRHelper.git"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
 s.source = { :git => "https://github.com/SajeevRaj5/SRHelper.git", 
-             :tag => "#{s.version}" }
+             :tag => "#{s.version.to_s}" }
 
 # 7
 s.source_files = "SRHelper/**/*.{swift}"
