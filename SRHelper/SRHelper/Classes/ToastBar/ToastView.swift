@@ -25,35 +25,36 @@ public class ToastView: UIView, UIGestureRecognizerDelegate {
         return instance
     }()
     
-    public func showAlert(title:String, message:String)
+    public func showAlert(title:String, message:String, closeButtonImage: UIImage?, textFont: UIFont?)
     {
         self.frame = CGRect(x: 0, y: -Constants.height , width: UIScreen.main.bounds.width, height: Constants.height + 17)
         self.backgroundColor =  UIColor.black
         
         finalViewFrame = self.frame
         
-        //Apply to the label
+        let fontName = ((textFont?.fontName ?? "").isEmpty) ? (textFont?.fontName ?? "") : "Helvetica Neue"
         
+        //Apply to the label
         if title != "" {
             let notificationText = title + "\n" + message
             let titleRange = (notificationText as NSString).range(of: title)
             let messageRange = (notificationText as NSString).range(of: message)
             
             let attribute = NSMutableAttributedString.init(string: notificationText)
-            attribute.addAttributes([NSAttributedStringKey.font: UIFont(name: "Helvetica Neue", size: 16)!], range: titleRange)
-            attribute.addAttributes([NSAttributedStringKey.font: UIFont(name: "Helvetica Neue", size: 14)!], range: messageRange)
+            attribute.addAttributes([NSAttributedStringKey.font: UIFont(name: fontName, size: 16)!], range: titleRange)
+            attribute.addAttributes([NSAttributedStringKey.font: UIFont(name: fontName, size: 14)!], range: messageRange)
 
             label.attributedText = attribute
         }
         else {
-            label.font = UIFont(name: "Helvetica Neue", size: 14)
+            label.font = UIFont(name: fontName, size: 14)
             label.text = message
         }
         
         setLabelProperties()
         self.addSubview(label)
         
-        setCloseButton()
+        setCloseButton(buttonImage: closeButtonImage)
         self.addSubview(closeButton)
         UIViewController.topController()?.view.addSubview(self)
         
@@ -96,14 +97,19 @@ public class ToastView: UIView, UIGestureRecognizerDelegate {
         }
     }
     
-    func setCloseButton() {
+    func setCloseButton(buttonImage: UIImage?) {
         if isRTL {
             closeButton.frame = CGRect(x: Constants.leftPadding, y: Constants.size + UIView.topPadding, width: Constants.size, height: Constants.size)
         }
         else {
-            closeButton.frame = CGRect(x: self.frame.size.width - Constants.size - Constants.leftPadding, y: Constants.size + UIView.topPadding, width: Constants.size, height: Constants.size) //label.frame.size.width + leftPadding
+            closeButton.frame = CGRect(x: self.frame.size.width - Constants.size - Constants.leftPadding, y: Constants.size + UIView.topPadding, width: Constants.size, height: Constants.size)
         }
-        closeButton.setTitle("X", for: .normal)
+        if let image = buttonImage {
+            closeButton.setImage(image, for: .normal)
+        }
+        else {
+            closeButton.setTitle("X", for: .normal)
+        }
         closeButton.addTarget(self, action: #selector(self.closeButtonTapped(button:)), for: .touchUpInside)
     }
     
@@ -120,6 +126,10 @@ public class ToastView: UIView, UIGestureRecognizerDelegate {
     
     public func dismissView() {
         self.removeFromSuperview()
+    }
+    
+    public static func show( title: String = "", message: String = "", closeButtonImage: UIImage?, textFont: UIFont?) {
+        ToastView.sharedInstance.showAlert(title: title, message: message, closeButtonImage: closeButtonImage, textFont: textFont)
     }
     
     // MARK:- Swipe Action
