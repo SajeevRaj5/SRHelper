@@ -15,6 +15,10 @@
 		5EE0B488215B5B3200E73AB6 /* Double+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B483215B5B3200E73AB6 /* Double+Helper.swift */; };
 		5EE0B489215B5B3200E73AB6 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B484215B5B3200E73AB6 /* String+Helper.swift */; };
 		5EE0B48A215B5B3200E73AB6 /* View+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B485215B5B3200E73AB6 /* View+Helper.swift */; };
+		5EE0B48E215B985D00E73AB6 /* Responder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B48D215B985D00E73AB6 /* Responder+Extensions.swift */; };
+		5EE0B490215B98B500E73AB6 /* TextField+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B48F215B98B500E73AB6 /* TextField+Helper.swift */; };
+		5EE0B492215B98DE00E73AB6 /* ViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B491215B98DE00E73AB6 /* ViewController+Helper.swift */; };
+		5EE0B495215CB01100E73AB6 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B494215CB01100E73AB6 /* ToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		5EE0B483215B5B3200E73AB6 /* Double+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Helper.swift"; sourceTree = "<group>"; };
 		5EE0B484215B5B3200E73AB6 /* String+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 		5EE0B485215B5B3200E73AB6 /* View+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Helper.swift"; sourceTree = "<group>"; };
+		5EE0B48D215B985D00E73AB6 /* Responder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Responder+Extensions.swift"; sourceTree = "<group>"; };
+		5EE0B48F215B98B500E73AB6 /* TextField+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Helper.swift"; sourceTree = "<group>"; };
+		5EE0B491215B98DE00E73AB6 /* ViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Helper.swift"; sourceTree = "<group>"; };
+		5EE0B494215CB01100E73AB6 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 		5E3E80162158A9C2003B2D83 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5EE0B493215CAFF400E73AB6 /* ToastBar */,
 				5EE0B480215B5B3200E73AB6 /* Extensions */,
 				5E3E80172158A9D0003B2D83 /* View.swift */,
 				5E3E80192158AB23003B2D83 /* Button.swift */,
@@ -85,8 +94,19 @@
 				5EE0B483215B5B3200E73AB6 /* Double+Helper.swift */,
 				5EE0B484215B5B3200E73AB6 /* String+Helper.swift */,
 				5EE0B485215B5B3200E73AB6 /* View+Helper.swift */,
+				5EE0B48D215B985D00E73AB6 /* Responder+Extensions.swift */,
+				5EE0B48F215B98B500E73AB6 /* TextField+Helper.swift */,
+				5EE0B491215B98DE00E73AB6 /* ViewController+Helper.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5EE0B493215CAFF400E73AB6 /* ToastBar */ = {
+			isa = PBXGroup;
+			children = (
+				5EE0B494215CB01100E73AB6 /* ToastView.swift */,
+			);
+			path = ToastBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +190,11 @@
 			files = (
 				5EE0B486215B5B3200E73AB6 /* Array+Helper.swift in Sources */,
 				5EE0B487215B5B3200E73AB6 /* Date+Helper.swift in Sources */,
+				5EE0B48E215B985D00E73AB6 /* Responder+Extensions.swift in Sources */,
+				5EE0B490215B98B500E73AB6 /* TextField+Helper.swift in Sources */,
+				5EE0B492215B98DE00E73AB6 /* ViewController+Helper.swift in Sources */,
 				5EE0B48A215B5B3200E73AB6 /* View+Helper.swift in Sources */,
+				5EE0B495215CB01100E73AB6 /* ToastView.swift in Sources */,
 				5E3E801A2158AB23003B2D83 /* Button.swift in Sources */,
 				5E3E80182158A9D0003B2D83 /* View.swift in Sources */,
 				5EE0B489215B5B3200E73AB6 /* String+Helper.swift in Sources */,

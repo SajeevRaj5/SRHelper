@@ -55,4 +55,13 @@ extension UIView {
             }
         }
     }
+    
+    static var topPadding: CGFloat {
+        switch UIScreen.main.nativeBounds.height {
+        case 2436:
+            return 10
+        default:
+            return 0
+        }
+    }
 }

@@ -51,6 +51,10 @@ extension String {
         return UIImage()
     }
     
+    var storyboard: UIStoryboard {
+        return UIStoryboard(name: self.capitalized, bundle: nil)
+    }
+    
     static func combine(stringList: [String?], seperator: String) -> String {
         let result = stringList.compactMap{$0}
         return result.joined(separator: seperator)
