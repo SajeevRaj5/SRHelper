@@ -19,6 +19,7 @@
 		5EE0B490215B98B500E73AB6 /* TextField+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B48F215B98B500E73AB6 /* TextField+Helper.swift */; };
 		5EE0B492215B98DE00E73AB6 /* ViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B491215B98DE00E73AB6 /* ViewController+Helper.swift */; };
 		5EE0B495215CB01100E73AB6 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B494215CB01100E73AB6 /* ToastView.swift */; };
+		5EE0B49B215CD0B700E73AB6 /* URL+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE0B49A215CD0B700E73AB6 /* URL+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5EE0B48F215B98B500E73AB6 /* TextField+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Helper.swift"; sourceTree = "<group>"; };
 		5EE0B491215B98DE00E73AB6 /* ViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Helper.swift"; sourceTree = "<group>"; };
 		5EE0B494215CB01100E73AB6 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		5EE0B49A215CD0B700E73AB6 /* URL+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				5EE0B48D215B985D00E73AB6 /* Responder+Extensions.swift */,
 				5EE0B48F215B98B500E73AB6 /* TextField+Helper.swift */,
 				5EE0B491215B98DE00E73AB6 /* ViewController+Helper.swift */,
+				5EE0B49A215CD0B700E73AB6 /* URL+Helper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				5EE0B48E215B985D00E73AB6 /* Responder+Extensions.swift in Sources */,
 				5EE0B490215B98B500E73AB6 /* TextField+Helper.swift in Sources */,
 				5EE0B492215B98DE00E73AB6 /* ViewController+Helper.swift in Sources */,
+				5EE0B49B215CD0B700E73AB6 /* URL+Helper.swift in Sources */,
 				5EE0B48A215B5B3200E73AB6 /* View+Helper.swift in Sources */,
 				5EE0B495215CB01100E73AB6 /* ToastView.swift in Sources */,
 				5E3E801A2158AB23003B2D83 /* Button.swift in Sources */,
