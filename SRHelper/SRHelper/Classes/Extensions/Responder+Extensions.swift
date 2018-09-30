@@ -9,11 +9,15 @@
 import UIKit
 
 extension UIResponder {
-    static var identifier: String {
+    public static var identifier: String {
         return "\(self)"
     }
     
     var isRTL: Bool {
         return (UIApplication.shared.userInterfaceLayoutDirection == UIUserInterfaceLayoutDirection.rightToLeft)
+    }
+    
+    public static var nib: UINib {
+        return UINib(nibName: identifier, bundle: nil)
     }
 }
