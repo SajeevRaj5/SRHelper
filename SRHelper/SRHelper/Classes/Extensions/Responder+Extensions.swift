@@ -13,7 +13,7 @@ extension UIResponder {
         return "\(self)"
     }
     
-    var isRTL: Bool {
+    public var isRTL: Bool {
         return (UIApplication.shared.userInterfaceLayoutDirection == UIUserInterfaceLayoutDirection.rightToLeft)
     }
     
