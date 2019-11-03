@@ -35,3 +35,16 @@ extension UIViewController {
     }
     
 }
+
+protocol Navigatable {}
+
+extension Navigatable where Self: UIViewController {
+    static func controller(storyboardName: String? = "Main",identifier: String? = nil) -> Self {
+        let storyBoard: UIStoryboard = UIStoryboard(name: storyboardName ?? "Main", bundle: nil)
+        let viewIdentifier = identifier ?? Self.identifier
+        guard let viewController = storyBoard.instantiateViewController(withIdentifier: viewIdentifier) as? Self else { return Self() }
+        return viewController
+    }
+}
+
+extension UIViewController: Navigatable {}
